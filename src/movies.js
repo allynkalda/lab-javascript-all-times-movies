@@ -46,25 +46,19 @@ function howManyMovies(movies) {
 
 // Order by title and print the first 20 titles
 
+function orderAlphabetically(array) {
+    let newArray = [];
+
+    array.forEach(element => {
+        newArray.push(element.title);
+        });
+    
+    var sorted = newArray.sort().splice(0, 20);
+    return sorted;
+}
 
 // Best yearly rate average
 /*
 
-= (arr) => {
-    if (arr.length === 0) return undefined
-    let filterArr = arr.filter(movie => (movie.genre.includes('Drama')) && (movie.director === 'Steven Spielberg'))
-    return `Steven Spielberg directed ${filterArr.length} drama movies!`
-  }
 
-function howManyMovies(movies) {
-    let stevenFilm = movies.filter( function (element) {
-        if (element.director == "Steven Spielberg")
-        return true;
-    });
-    let dramaFilm = stevenFilm.filter( function (element) {
-        if (element.genre == "drama")
-        return true;
-    })
-    return dramaFilm;
-}
 */
